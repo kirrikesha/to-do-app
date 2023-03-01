@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Light', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #84be9f;
+}
+
+.todos-list {
+    margin-top: 100px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todos-list fieldset {
+    background: #cad076;
+    border: 2px solid #043c35;
+    border-radius: 15px;
+}
+
+.todos-list fieldset legend {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #a04b66;
+}
+
+.todos-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.todos-list .btn-add {
+    margin-top: 10px;
+    margin-left: auto;
+    padding: 7px 20px;
+    background: #a04b66;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.todos-list .btn-add:hover {
+    background: #6b2d42;
+
+}
+
+.todos-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.todos-item .left-bar {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.todos-item .left-bar input {
+   display: none;
+}
+
+.todos-item .left-bar p {
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.todos-item button {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.todos-item button img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.todos-item .btn-del {
+    margin-left: 15px;
+}
+
+.line {
+    width: calc(100% - 70px);
+    border-top: 2px solid #043c35;
+    animation: check 1s;
+    position: absolute;
+    top: 50%;
+}
+
+@keyframes check {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(100% - 70px);
+    }
+}
